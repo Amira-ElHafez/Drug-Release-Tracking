@@ -24,7 +24,7 @@ where:
 * $u_b$, $v_b$: maximum binding capacities
 
 
-### 🔧 Numerical Methods Used
+###  Numerical Methods Used
 
 To solve this system, we implemented and compared **four different numerical approaches**:
 
