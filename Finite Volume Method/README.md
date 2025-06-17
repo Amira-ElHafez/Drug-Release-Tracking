@@ -140,11 +140,25 @@ It demonstrates how mechanical forces can couple with chemical transport process
 
 <p align="center">
   <em>
-    Figure 1 shows the time evolution of the free drug \( u \), bound drug \( v \), and mechanical stress \( s \) at a fixed spatial location \( x = 0.02 \), using the Finite Volume Method (FVM). The top-left panel displays a rapid decay in \( u \), indicating diffusion and reaction depletion. The top-right panel shows \( v \) rising initially and then falling, suggesting binding saturation and unbinding. The bottom-left panel presents the evolution of \( s \), with an initial negative dip followed by gradual recovery, capturing the delayed mechanical response to drug concentration. The bottom-right panel combines all three components, illustrating their coupled behavior over time.
+   Here is a more concise and professional version of the **Figure 1** description for your GitHub `README.md`:
+
+---
+
+### Figure 1: Temporal Evolution at x = 0.02
+
+Figure 1 shows the time evolution of the **free drug** u, **bound drug** v, and **mechanical stress** s at a fixed location x = 0.02, computed using the Finite Volume Method (FVM).
+
+* **u(t)** rapidly decreases due to diffusion and binding.
+* **v(t)** rises, then falls, indicating saturation and unbinding.
+* **s(t)** shows an initial dip followed by recovery, reflecting delayed mechanical response.
+* The combined panel illustrates the coupled dynamics of transport, reaction, and stress.
+
+---
+
   </em>
 </p>
 
-### **Figure 2 – Final Spatial Profiles at \( t = t_f \)**
+### **Figure 2 –  Spatial Profiles a
 
 <p align="center">
   <img src="Simulation%20Results/2.png" alt="Figure 2 – Spatial Profiles of u, v, and s" width="650">
