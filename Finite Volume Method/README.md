@@ -140,7 +140,6 @@ It demonstrates how mechanical forces can couple with chemical transport process
 
 <p align="center">
   <em>
-   Here is a more concise and professional version of the **Figure 1** description for your GitHub `README.md`:
 
 ---
 
