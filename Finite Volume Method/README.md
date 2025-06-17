@@ -129,3 +129,6 @@ This model is ideal for students and researchers working on:
 
 It demonstrates how mechanical forces can couple with chemical transport processes, a key concept in **tissue engineering**, **drug delivery**, and **biomechanics**.
 
+---
+
+## Simulation Results
