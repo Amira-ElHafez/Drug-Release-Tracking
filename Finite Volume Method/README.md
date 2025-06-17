@@ -139,7 +139,9 @@ It demonstrates how mechanical forces can couple with chemical transport process
 </p>
 
 <p align="center">
-  <em>
+<em>
+Figure 1 – Temporal Evolution
+  </em>
 
 ---
 
