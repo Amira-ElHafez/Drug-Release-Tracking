@@ -135,6 +135,6 @@ It demonstrates how mechanical forces can couple with chemical transport process
 ### **Figure 1 – Polymer Stress \( \sigma(x,t) \)**
 
 <p align="center">
-  <img src="Simulation%20Result/1.png" alt="Figure 1 – Polymer Stress" width="650">
+  <img src="Simulation%20Results/1.png" alt="Figure 1 – Polymer Stress" width="650">
 </p>
 
