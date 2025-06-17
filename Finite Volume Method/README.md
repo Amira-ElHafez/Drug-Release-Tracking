@@ -169,4 +169,6 @@ Figure 1 shows the time evolution of the **free drug** u, **bound drug** v, and 
 Figure 2: Spatial Distributions 
   </em>
 </p>
-
+ Final spatial distributions of free drug u(x), bound drug  v(x), and stress  s(x)  at time  t = t_f .
+    The drug peaks near the center and fades toward boundaries. Bound drug follows a similar but lower profile.
+    Stress shows a smooth curve due to coupling with drug dynamics and no-flux boundaries.
