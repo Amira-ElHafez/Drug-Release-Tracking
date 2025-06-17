@@ -110,6 +110,11 @@ You’ll see console output and figures will be saved automatically.
 * Modular design: `dydt` function handles all three PDEs simultaneously
 * Function evaluations are counted for benchmarking
 * Easy to adjust time range, number of grid points, or parameters
+* Easy to switch between **full profile plots** and **center-point evolution** by setting:
+
+```python
+ip = 1  # Set to 2 for center point only
+```
 
 ---
 
