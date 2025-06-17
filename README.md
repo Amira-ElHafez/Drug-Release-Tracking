@@ -1,6 +1,5 @@
 # Drug-Release-Tracking 
 
----
 
 ## Project Overview
 
@@ -24,7 +23,6 @@ where:
 * $g(u,v) = u(u_b - u) - v(v_b - v)$: nonlinear reaction terms
 * $u_b$, $v_b$: maximum binding capacities
 
----
 
 ### 🔧 Numerical Methods Used
 
@@ -54,5 +52,4 @@ To solve this system, we implemented and compared **four different numerical app
    * Learns the solution using neural networks trained on collocation points.
    * Requires no spatial mesh and can generalize well across the domain.
 
----
 
