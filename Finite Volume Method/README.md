@@ -152,7 +152,17 @@ It demonstrates how mechanical forces can couple with chemical transport process
 
 <p align="center">
   <em>
-    Figure 2 illustrates the spatial distributions of the free drug \( u(x) \), bound drug \( v(x) \), and mechanical stress \( s(x) \) at the final simulation time \( t = t_f \). The free drug \( u \) exhibits a peak near the center and tapers off toward the boundaries, reflecting symmetric diffusion from the core. The bound drug \( v \) follows a similar profile but with lower amplitude, showing the cumulative effect of binding interactions. The stress \( s \) shows a smooth, possibly parabolic, distribution due to its coupling with the drug concentration and the imposed zero-flux boundary condition. Together, the profiles capture the steady-state behavior resulting from the coupled reaction-diffusion-mechanical system.
+### Figure 2: Spatial Distributions at Final Simulation Time $t = t_f$
+
+Figure 2 illustrates the spatial profiles of the **free drug** $u(x)$, **bound drug** $v(x)$, and **mechanical stress** $s(x)$ at the final simulation time $t = t_f$.
+
+* **Free drug concentration** $u(x)$ exhibits a maximum near the center of the domain and decreases symmetrically toward the boundaries, consistent with diffusion from a central source under symmetric boundary conditions.
+
+* **Bound drug** $v(x)$ follows a similar distribution but with reduced amplitude, capturing the cumulative effect of reversible binding interactions over time.
+
+* **Mechanical stress** $s(x)$ displays a smooth, possibly parabolic profile. This reflects its coupling to the spatial distribution of the free drug and adherence to zero-flux boundary conditions.
+
+These results characterize the steady-state solution of the coupled **reaction–diffusion–mechanics** system, highlighting the interplay between transport phenomena, chemical kinetics, and mechanical feedback.
   </em>
 </p>
 
