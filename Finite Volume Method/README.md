@@ -135,7 +135,7 @@ It demonstrates how mechanical forces can couple with chemical transport process
 ### **Figure 1 – Temporal Evolution at Center Point \( x = 0.02 \) (FVM)**
 
 <p align="center">
-  <img src="Simulation%20Result/1.png" alt="Figure 1 – Temporal Evolution of u, v, and s at x = 0.02" width="650">
+  <img src="Simulation%20Results/1.png" alt="Figure 1 – Temporal Evolution of u, v, and s at x = 0.02" width="650">
 </p>
 
 <p align="center">
@@ -147,7 +147,7 @@ It demonstrates how mechanical forces can couple with chemical transport process
 ### **Figure 2 – Final Spatial Profiles at \( t = t_f \)**
 
 <p align="center">
-  <img src="Simulation%20Result/2.png" alt="Figure 2 – Final Spatial Profiles of u, v, and s" width="650">
+  <img src="Simulation%20Results/2.png" alt="Figure 2 – Final Spatial Profiles of u, v, and s" width="650">
 </p>
 
 <p align="center">
