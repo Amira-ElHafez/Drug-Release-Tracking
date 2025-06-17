@@ -56,7 +56,3 @@ To solve this system, we implemented and compared **four different numerical app
 
 ---
 
-Each method was benchmarked for **accuracy**, **stability**, and **computational efficiency**, providing a comparative view of classical numerical schemes versus modern machine learning-based solvers.
-
----
-
