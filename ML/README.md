@@ -90,5 +90,69 @@ Mass Conservation Analysis:
   
   t= 2.0: Conservation error = 74.578%
 
+  ## Final Training Summary:
+  - **PDE Losses:**  
+  - Unbound \( u \): 0.000142  
+  - Bound \( v \): 0.000005  
+  - Stress \( s \): 0.000052  
+
+  - **Total Loss:** 0.004937  
+  - **Loss Reduction:** 99.95%
+
   ## Visualizing results:
-  ### 1. 
+  This section summarizes the performance of the Physics-Informed Neural Network (PINN) model through visual diagnostics and final solution behavior.
+  
+  ### 1. Training Progress:
+
+  <p align="center">
+      <img src="3PDE_Complete_Results/training_progress_20250612_102833.png" alt="PINN Training Diagnostics" width="1000"/>
+  </p>
+  
+  This figure shows the evolution of key loss components during training:
+  
+- **Initial condition losses** (for \( u \), \( v \), and \( \sigma \)) gradually decrease, confirming correct initialization.
+- **PDE residual losses** decline across all three equations, reflecting improved physics compliance.
+- **Total weighted loss** drops sharply, indicating successful convergence.
+- **Learning rate** decay is plotted to show the adaptive schedule.
+- **Physical balance metric** confirms that the model maintains a reasonable balance between physics and data constraints throughout training.
+
+### 2. PDE Compliance and Spatio-Temporal Behavior:
+  <p align="center">
+      <img src="3PDE_Complete_Results/pde_compliance_20250612_102833.png" alt="Residual Heatmaps and Solution Evolution" width="1000"/>
+  </p>
+  
+**2.1 Figure Breakdown:**
+  
+**Upper half**: Residual heatmaps of the three governing PDEs show how well the model satisfies the physical equations across space and time.  
+**Lower half**: Spatio-temporal evolution of unbound drug \( u(x,t) \), bound drug \( v(x,t) \), and stress \( s(x,t) \).  
+
+- \( u \): diffuses and binds over time, decreasing steadily.
+- \( v \): increases and saturates.
+- \( s \): initially zero, then rises and fades, forming a bell-like spatial shape.
+
+**2.2 Residual Statistics Summary**
+
+Here are the residual magnitudes for the learned PDEs, evaluating how well the trained PINN model satisfies the equations.
+
+| PDE Component       | Max Residual | Mean Residual |
+|---------------------|--------------|----------------|
+| **Unbound \( u \)** | 0.0728       | 0.0082         |
+| **Bound \( v \)**   | 0.0170       | 0.0018         |
+| **Stress \( s \)**  | 0.0309       | 0.0048         |
+
+### 3. Learned Solution:
+<p align="center">
+  <img src="3PDE_Complete_Results/solution_evolution_20250612_102833.png" alt="PINN Solution Dynamics" width="1000"/>
+</p>
+
+**Figure breakdown:**
+
+- **Upper half:** Spatio-temporal behavior of:
+  - \( u(x,t) \): Unbound drug, which diffuses and binds, decreasing over time.
+  - \( v(x,t) \): Bound drug, which increases then saturates due to equilibrium binding.
+  - \( s(x,t) \): Polymer stress, which forms a symmetric shape, rising then fading.
+
+- **Lower half:** Temporal profiles at the center point \( x = 0 \):
+  - \( u(0,t) \): Declines as it diffuses and reacts.
+  - \( v(0,t) \): Rises quickly then levels off.
+  - \( s(0,t) \): Starts at zero, increases with drug activity, then stabilizes.
