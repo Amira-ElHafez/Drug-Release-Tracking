@@ -3,11 +3,11 @@
 ## overview:
 This part of the project uses PINNs to solve a coupled system of 3 PDEs:
 
-u(x,t): Unbound drug concentration
+- u(x,t): Unbound drug concentration
 
-v(x,t): Bound drug concentration
+- v(x,t): Bound drug concentration
 
-σ(x,t): Polymer stress
+- σ(x,t): Polymer stress
 
 ## Drug Release Dynamics and Mass Conservation Analysis:
 We track the evolution of unbound, bound, and total drug concentrations, along with polymer stress, over time. The model shows accurate dynamic behavior and captures key physical trends. Additionally, we assess mass conservation by comparing total drug content at different time points, observing expected losses and quantifying conservation error.
