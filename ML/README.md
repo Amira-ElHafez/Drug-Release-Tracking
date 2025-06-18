@@ -4,7 +4,9 @@
 This part of the project uses PINNs to solve a coupled system of 3 PDEs:
 
 u(x,t): Unbound drug concentration
+
 v(x,t): Bound drug concentration
+
 σ(x,t): Polymer stress
 
 ## Drug Release Dynamics and Mass Conservation Analysis:
