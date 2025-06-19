@@ -1,55 +1,127 @@
-# Drug-Release-Tracking 
+#  Drug Release Tracking via Numerical and Deep Learning Methods
 
+📁 **Full Report**: [Click here to view the full PDF report](https://drive.google.com/file/d/1sjhQngD_V0-lfyJuTGpfvhyAA7eJTuBH/view?usp=sharing)
 
-## Project Overview
+##  Overview
 
-This project focuses on solving a **coupled system of three nonlinear partial differential equations (PDEs)** that describe interacting transport and reaction dynamics. The system models the temporal and spatial evolution of three dependent variables: $u(x,t)$, $v(x,t)$, and $s(x,t)$, governed by diffusion, reaction, and coupling terms.
+This project investigates and compares four advanced techniques **Method of Lines (MOL)**, **Finite Volume Method (FVM)**, **Finite Element Method (FEM)**, and **Physics-Informed Neural Networks (PINNs)** to solve a nonlinear system of coupled PDEs modeling drug diffusion and mechanical stress in polymeric tissues.
 
-The governing equations are:
+---
+
+## Problem Description
+
+We consider a bio-mathematical model for drug release involving three dependent variables:
+
+- u(x,t) → Unbound (free) drug  
+- v(x,t) → Bound drug  
+- σ(x,t) → Stress in the polymer matrix  
+
+The model incorporates **nonlinear binding kinetics**, **diffusion**, and **stress coupling**. Governing equations:
 
 $$
-\begin{aligned}
-\frac{\partial u}{\partial t} &= D \frac{\partial^2 u}{\partial x^2} + E \frac{\partial^2 s}{\partial x^2} + f(u,v) \\
-\frac{\partial v}{\partial t} &= g(u,v) \\
-\frac{\partial s}{\partial t} &= \alpha u - \beta s + \gamma \frac{\partial u}{\partial t}
-\end{aligned}
+\frac{\partial u}{\partial t} = D \frac{\partial^2 u}{\partial x^2} + E \frac{\partial^2 \sigma}{\partial x^2} + f(u, v)
 $$
 
-where:
+$$
+\frac{\partial v}{\partial t} = g(u, v)
+$$
 
-* $D$, $E$: diffusion coefficients
-* $\alpha$, $\beta$, $\gamma$: coupling constants
-* $f(u,v) = -u(u_b - u) + v(v_b - v)$,
-* $g(u,v) = u(u_b - u) - v(v_b - v)$: nonlinear reaction terms
-* $u_b$, $v_b$: maximum binding capacities
+$$
+\frac{\partial \sigma}{\partial t} = \alpha u - \beta \sigma + \gamma \frac{\partial u}{\partial t}
+$$
 
+---
 
-###  Numerical Methods Used
+##  Numerical Methods
 
-To solve this system, we implemented and compared **four different numerical approaches**:
+###  Method of Lines (MOL)
+- Spatial discretization via finite differences  
+- Temporal integration using *LSODA*  
+- Good accuracy, but relatively *computationally expensive*
 
-1. **Finite Element Method (FEM)**
+###  Finite Volume Method (FVM)
+- Volume-integrated discretization with central-difference fluxes  
+- Robin boundary conditions implemented  
+- Conservative and physically grounded, but slightly less accurate
 
-   * Spatial domain discretized using piecewise linear basis functions.
-   * Time evolution computed via implicit time-stepping schemes.
-   * Offers accuracy and flexibility in handling complex boundary conditions.
+###  Finite Element Method (FEM)
+- Weak form via linear elements  
+- Mass and stiffness matrix formulation  
+- *Best trade-off* between accuracy and runtime
 
-2. **Method of Lines (MOL)**
+###  PINNs (Physics-Informed Neural Networks)
+- Mesh-free neural network model  
+- Trained to minimize residuals of PDEs + initial/boundary loss  
+- Promising deep learning alternative, but training-sensitive
 
-   * Spatial derivatives discretized using finite difference methods.
-   * Transforms the PDE system into a large system of ODEs in time.
-   * Solved using standard ODE solvers like Runge-Kutta.
+---
 
-3. **Finite Volume Method (FVM)**
+##  Results Summary
 
-   * Based on conservation laws and control volume integration.
-   * Ensures flux balance across cell interfaces.
-   * Particularly suited for handling discontinuities and conservation properties.
+| *Time* | *Method* | *u(%)* | *v(%)* | *σ(%)* |
+|---------:|------------|---------:|---------:|---------:|
+| 0.00     | MOL        | 0.000    | 0.000    | —        |
+|          | FVM        | 3.729    | 1.111    | —        |
+|          | FEM        | 0.109    | 0.036    | —        |
+| 0.40     | MOL        | 0.000    | 0.000    | 0.000    |
+|          | FVM        | 3.524    | 1.038    | 0.723    |
+|          | FEM        | 0.106    | 0.041    | 0.077    |
 
-4. **Physics-Informed Neural Networks (PINN)**
+⏱ *Compute Time*:
+- MOL: 0.3094 s  
+- FVM: 0.1672 s  
+- FEM: 0.1151 s  
 
-   * Deep learning framework that embeds the governing PDEs into the loss function.
-   * Learns the solution using neural networks trained on collocation points.
-   * Requires no spatial mesh and can generalize well across the domain.
+Note: The plots, results, and performance graphs for each method are provided within their respective method sections in their README. Scroll through to view simulation outputs for MOL, FVM, FEM, PINN and accuracy comparisons.
 
+---
 
+##  PINN Architecture
+
+- 8 hidden layers, 100 neurons each  
+- tanh activation, Xavier initialization  
+- Adaptive loss weighting schedule  
+- Trained with Adam optimizer (lr = 0.0008) for 3000 epochs  
+
+---
+
+##  Conclusions
+
+- *FEM* outperformed other numerical methods in both *accuracy and efficiency*
+- *PINNs* are a flexible future path, requiring tuning and more resources  
+- FVM shows strong conservation but needs higher-order schemes to match FEM
+
+---
+
+##  Future Directions
+
+- Upgrade MOL with adaptive or higher-order schemes  
+- Extend FEM to 2D/3D geometries  
+- Introduce TVD/flux-limiter techniques for FVM  
+- Improve PINNs via dynamic loss weighting and physics-informed regularization
+
+---
+
+##  References
+
+1. W. E. Schiesser, Differential Equation Analysis in Biomedical Science  
+2. M. Raissi et al., Physics-Informed Neural Networks, JCP, 2019  
+3. Zhou & Wu, Finite Element Analysis of Drug Diffusion, 2006  
+4. LeVeque, Finite Volume Methods for Hyperbolic Problems, 2002  
+5. Liu et al., Conservative FVM in Drug Modeling, 2017  
+6. J. N. Reddy, Introduction to FEM, 4th ed.  
+7. Brenner & Scott, FEM for Coupled PDEs, SIAM, 2007
+
+---
+##  Team Members
+| Name              | ID           | Contribution                                      |
+|-------------------|--------------|---------------------------------------------------|
+| Aliaa Mahmoud     |    9230592   | FEM Method, accuracy comparison                   |
+| Arwa Mohamed      |  9230203     | ML|
+| Amira El-Sayed    |   9230244    | MOL implementation, ML                            |
+| Mai Mahmoud       | 9230934      | FEM Method, accuracy comparison                   |
+| Mahmoud Abdullah  |  9220795     | ML                                                 |
+| Mohamed Mandour   |  9230759     | FVM Method                                      |
+| Fady Osama        |  91241293    | FVM Method  , accuracy comparison                |
+
+**Special thanks to Dr. Muhammad Rushdi and TA Alaa Tarek for their guidance.**
