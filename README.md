@@ -1,12 +1,12 @@
 
-# 📊 Drug Release Tracking via Numerical and Machine Learning Methods
+# Drug Release Tracking via Numerical and Machine Learning Methods
 
 ---
 
-## 📁 Project Resources
+##  Project Resources
 
-* 📄 **Full Report (PDF)**: [Read the full technical report](https://drive.google.com/file/d/1sjhQngD_V0-lfyJuTGpfvhyAA7eJTuBH/view?usp=sharing)
-* 📽 **Presentation Slides**: [View the slides on Canva](https://www.canva.com/design/DAGqlSWfstI/_3BSJV24NPG8SgkdEklldQ/edit?utm_content=DAGqlSWfstI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+*  **Full Report (PDF)**: [Read the full technical report](https://drive.google.com/file/d/1sjhQngD_V0-lfyJuTGpfvhyAA7eJTuBH/view?usp=sharing)
+*  **Presentation Slides**: [View the slides on Canva](https://www.canva.com/design/DAGqlSWfstI/_3BSJV24NPG8SgkdEklldQ/edit?utm_content=DAGqlSWfstI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 
 
