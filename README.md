@@ -1,8 +1,7 @@
 #  Drug Release Tracking via Numerical and Deep Learning Methods
 
 📁 **Full Report**: [Click here to view the full PDF report](https://drive.google.com/file/d/1sjhQngD_V0-lfyJuTGpfvhyAA7eJTuBH/view?usp=sharing)
-📁 **Slides**: [Click here to view the full PDF Slides]([https://drive.google.com/file/d/1sjhQngD_V0-lfyJuTGpfvhyAA7eJTuBH/view?usp=sharing](https://www.canva.com/design/DAGqlSWfstI/_3BSJV24NPG8SgkdEklldQ/edit?utm_content=DAGqlSWfstI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
+📁 **Full Report**: [Click here to view the Slides](https://www.canva.com/design/DAGqlSWfstI/_3BSJV24NPG8SgkdEklldQ/edit?utm_content=DAGqlSWfstI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 ##  Overview
 
 This project investigates and compares four advanced techniques **Method of Lines (MOL)**, **Finite Volume Method (FVM)**, **Finite Element Method (FEM)**, and **Physics-Informed Neural Networks (PINNs)** to solve a nonlinear system of coupled PDEs modeling drug diffusion and mechanical stress in polymeric tissues.
