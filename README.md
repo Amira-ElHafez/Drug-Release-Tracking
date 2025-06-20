@@ -1,5 +1,5 @@
 
-# 📊 Drug Release Tracking via Numerical and Deep Learning Methods
+# 📊 Drug Release Tracking via Numerical and Machine Learning Methods
 
 ---
 
